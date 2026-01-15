@@ -114,11 +114,22 @@ const ContactPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">
                     Address
                   </h3>
-                  <p className="text-gray-600">
-                    Shahjalal University of Science and Technology
+                  <a
+                    href="https://www.google.com/maps/place/Shahjalal+University+of+Science+and+Technology/@24.9172232,91.8293383,17z/data=!3m1!4b1!4m6!3m5!1s0x3750556002144eab:0xe277e14dbca9f2ab!8m2!3d24.9172232!4d91.8319132!16zL20vMDYxc2to"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-[#0a415d] transition-colors cursor-pointer block"
+                  >
+                    <p className="text-gray-600 hover:text-[#0a415d]">
+                      Shahjalal University of Science and Technology
+                    </p>
+                    <p className="text-gray-600 hover:text-[#0a415d]">
+                      Sylhet-3114, Bangladesh
+                    </p>
+                  </a>
+                  <p className="text-sm text-gray-500">
+                    SUST Campus - Click to view on map
                   </p>
-                  <p className="text-gray-600">Sylhet-3114, Bangladesh</p>
-                  <p className="text-sm text-gray-500">SUST Campus</p>
                 </div>
               </div>
             </div>
@@ -196,13 +207,14 @@ const ContactPage: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-lg p-4">
             <div className="rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2827391629076!2d91.79849061440844!3d24.921109146536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37505558dd0be6a1%3A0x65c7e47c94b6dc49!2sShahjalal%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sbd!4v1635905049869!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.007086614594!2d91.8293383!3d24.9172232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750556002144eab%3A0xe277e14dbca9f2ab!2sShahjalal%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sbd!4v1642524800000!5m2!1sen!2sbd"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="SUST Location Map"
               ></iframe>
             </div>
             <p className="text-center mt-4 text-sm text-gray-500">
