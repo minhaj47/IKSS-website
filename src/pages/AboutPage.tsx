@@ -138,7 +138,7 @@ const AboutPage: React.FC = () => {
             how we operate to achieve our mission effectively.
           </p>
           <a
-            href="https://docs.google.com/document/d/1IcezKeJDoOfbPuYG3yGtzkJ8gN9cIGW2AHKHysucPmI/edit?usp=sharing"
+            href="https://docs.google.com/document/d/1QE-JF_raafEIvvUOOBr7ohFAafj-9koSrg-HbmQZADE/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 bg-[#0a415d] text-white px-6 py-3 rounded-lg hover:bg-[#0a415d]/90 transition-colors duration-300"
