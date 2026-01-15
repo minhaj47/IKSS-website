@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Filter, X } from "lucide-react";
+import React, { useState } from "react";
 
 interface GalleryImage {
   id: number;
@@ -12,7 +12,7 @@ interface GalleryImage {
 
 const GalleryPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const images: GalleryImage[] = [
     {
@@ -20,8 +20,9 @@ const GalleryPage: React.FC = () => {
       src: "/marchForGaza.jpg",
       title: "March",
       category: "Events",
-      description: "Students participating in our monthly Islamic knowledge workshop",
-      date: "2024-01-15"
+      description:
+        "Students participating in our monthly Islamic knowledge workshop",
+      date: "2024-01-15",
     },
     {
       id: 2,
@@ -29,14 +30,17 @@ const GalleryPage: React.FC = () => {
       title: "Anti-Valentine's Day Campaign",
       category: "Events",
       description: "Beautiful moments from our Quran recitation competition",
-      date: "2024-01-20"
-    }
+      date: "2024-01-20",
+    },
   ];
 
-  const categories = ['all', ...Array.from(new Set(images.map(img => img.category)))];
+  const categories = [
+    "all",
+    ...Array.from(new Set(images.map((img) => img.category))),
+  ];
 
-  const filteredImages = images.filter(image => 
-    selectedCategory === 'all' || image.category === selectedCategory
+  const filteredImages = images.filter(
+    (image) => selectedCategory === "all" || image.category === selectedCategory
   );
 
   const openLightbox = (image: GalleryImage) => {
@@ -47,29 +51,35 @@ const GalleryPage: React.FC = () => {
     setSelectedImage(null);
   };
 
-  const navigateImage = (direction: 'prev' | 'next') => {
+  const navigateImage = (direction: "prev" | "next") => {
     if (!selectedImage) return;
-    
-    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
+
+    const currentIndex = filteredImages.findIndex(
+      (img) => img.id === selectedImage.id
+    );
     let newIndex;
-    
-    if (direction === 'prev') {
-      newIndex = currentIndex > 0 ? currentIndex - 1 : filteredImages.length - 1;
+
+    if (direction === "prev") {
+      newIndex =
+        currentIndex > 0 ? currentIndex - 1 : filteredImages.length - 1;
     } else {
-      newIndex = currentIndex < filteredImages.length - 1 ? currentIndex + 1 : 0;
+      newIndex =
+        currentIndex < filteredImages.length - 1 ? currentIndex + 1 : 0;
     }
-    
+
     setSelectedImage(filteredImages[newIndex]);
   };
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-teal-600 to-amber-600 text-white py-16 animate-fade-in">
+      <section className="bg-gradient-to-br from-[#0a415d] to-[#c1884f] text-white py-16 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">Gallery</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
+            Gallery
+          </h1>
           <p className="text-xl text-amber-100 max-w-3xl mx-auto animate-slide-up delay-200">
-            Capturing moments of faith, community, and growth at SEU Dawah Circle
+            Capturing moments of faith, community, and growth at IKSS
           </p>
         </div>
       </section>
@@ -77,21 +87,23 @@ const GalleryPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
         {/* Filter Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 animate-slide-up">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">Our Memories</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">
+            Our Memories
+          </h2>
           <div className="flex items-center space-x-4">
             <Filter className="text-gray-600" size={20} />
             <div className="flex flex-wrap gap-2">
-              {categories.map(category => (
+              {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category
-                      ? 'bg-teal-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                      ? "bg-[#0a415d] text-white"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >
-                  {category === 'all' ? 'All Photos' : category}
+                  {category === "all" ? "All Photos" : category}
                 </button>
               ))}
             </div>
@@ -126,7 +138,9 @@ const GalleryPage: React.FC = () => {
         {filteredImages.length === 0 && (
           <div className="text-center py-12">
             <div className="text-gray-400 mb-4">📷</div>
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">No images found</h3>
+            <h3 className="text-xl font-semibold text-gray-600 mb-2">
+              No images found
+            </h3>
             <p className="text-gray-500">Try selecting a different category.</p>
           </div>
         )}
@@ -146,13 +160,13 @@ const GalleryPage: React.FC = () => {
 
             {/* Navigation Buttons */}
             <button
-              onClick={() => navigateImage('prev')}
+              onClick={() => navigateImage("prev")}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-colors"
             >
               <ChevronLeft size={24} />
             </button>
             <button
-              onClick={() => navigateImage('next')}
+              onClick={() => navigateImage("next")}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-colors"
             >
               <ChevronRight size={24} />
@@ -170,7 +184,9 @@ const GalleryPage: React.FC = () => {
               <h3 className="text-xl font-bold mb-2">{selectedImage.title}</h3>
               <p className="text-gray-300 mb-2">{selectedImage.description}</p>
               <div className="flex justify-between items-center text-sm">
-                <span className="bg-teal-600 px-3 py-1 rounded-full">{selectedImage.category}</span>
+                <span className="bg-teal-600 px-3 py-1 rounded-full">
+                  {selectedImage.category}
+                </span>
                 <span>{new Date(selectedImage.date).toLocaleDateString()}</span>
               </div>
             </div>

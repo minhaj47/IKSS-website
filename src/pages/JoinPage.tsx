@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
-import { Users, Heart, Star, Send, CheckCircle } from 'lucide-react';
+import { CheckCircle, Heart, Send, Star, Users } from "lucide-react";
+import React, { useState } from "react";
 
 const JoinPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    department: '',
-    reason: '',
-    experience: '',
-    commitment: ''
+    name: "",
+    email: "",
+    department: "",
+    reason: "",
+    experience: "",
+    commitment: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setIsSubmitted(true);
   };
 
@@ -34,23 +38,26 @@ const JoinPage: React.FC = () => {
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="text-green-600" size={32} />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Application Submitted!</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Application Submitted!
+          </h2>
           <p className="text-gray-600 mb-6">
-            Thank you for your interest in joining SEU Dawah Circle. We'll review your application and get back to you soon, InshaAllah.
+            Thank you for your interest in joining IKSS. We'll review your
+            application and get back to you soon, InshaAllah.
           </p>
           <button
             onClick={() => {
               setIsSubmitted(false);
               setFormData({
-                name: '',
-                email: '',
-                department: '',
-                reason: '',
-                experience: '',
-                commitment: ''
+                name: "",
+                email: "",
+                department: "",
+                reason: "",
+                experience: "",
+                commitment: "",
               });
             }}
-            className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors duration-300"
+            className="bg-[#0a415d] text-white px-6 py-3 rounded-lg hover:bg-[#0a415d]/90 transition-colors duration-300"
           >
             Submit Another Application
           </button>
@@ -62,11 +69,14 @@ const JoinPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-teal-600 to-amber-600 text-white py-16 animate-fade-in">
+      <section className="bg-gradient-to-br from-[#0a415d] to-[#c1884f] text-white py-16 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">Join the Circle</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
+            Join the Circle
+          </h1>
           <p className="text-xl text-amber-100 max-w-3xl mx-auto animate-slide-up delay-200">
-            Be a part of something greater. Join SEU Dawah Circle and help spread the light of Islam
+            Be a part of something greater. Join IKSS and help spread the light
+            of Islam
           </p>
         </div>
       </section>
@@ -75,29 +85,37 @@ const JoinPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Why Join Section */}
           <div className="animate-slide-up">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">Why Join SEU Dawah Circle?</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-800 mb-8">
+              Why Join IKSS?
+            </h2>
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Heart className="text-teal-600" size={24} />
+                <div className="w-12 h-12 bg-[#0a415d]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Heart className="text-[#0a415d]" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Spiritual Growth</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    Spiritual Growth
+                  </h3>
                   <p className="text-gray-600">
-                    Deepen your understanding of Islam through regular study circles, workshops, and discussions with like-minded peers.
+                    Deepen your understanding of Islam through regular study
+                    circles, workshops, and discussions with like-minded peers.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="text-amber-600" size={24} />
+                <div className="w-12 h-12 bg-[#c1884f]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Users className="text-[#c1884f]" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Brotherhood & Sisterhood</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    Brotherhood & Sisterhood
+                  </h3>
                   <p className="text-gray-600">
-                    Build lasting friendships with fellow Muslim students and create a supportive community on campus.
+                    Build lasting friendships with fellow Muslim students and
+                    create a supportive community on campus.
                   </p>
                 </div>
               </div>
@@ -107,31 +125,36 @@ const JoinPage: React.FC = () => {
                   <Star className="text-slate-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Leadership Development</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    Leadership Development
+                  </h3>
                   <p className="text-gray-600">
-                    Develop leadership skills by organizing events, leading discussions, and taking initiative in dawah activities.
+                    Develop leadership skills by organizing events, leading
+                    discussions, and taking initiative in dawah activities.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 bg-gradient-to-br from-teal-50 to-amber-50 rounded-2xl p-6 border border-teal-100">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">What We Expect</h3>
+            <div className="mt-8 bg-gradient-to-br from-[#0a415d]/5 to-[#c1884f]/5 rounded-2xl p-6 border border-[#0a415d]/10">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                What We Expect
+              </h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#0a415d] rounded-full"></div>
                   <span>Regular attendance at meetings and events</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#0a415d] rounded-full"></div>
                   <span>Active participation in dawah activities</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#0a415d] rounded-full"></div>
                   <span>Commitment to Islamic values and principles</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#0a415d] rounded-full"></div>
                   <span>Willingness to learn and grow</span>
                 </li>
               </ul>
@@ -140,16 +163,17 @@ const JoinPage: React.FC = () => {
 
           {/* Application Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8 animate-slide-up delay-200">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Join SEU Dawah Circle</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">Join IKSS</h2>
             <p className="text-gray-600 mb-6">
-              Ready to be part of our mission? Click the button below to fill out our application form.
+              Ready to be part of our mission? Click the button below to fill
+              out our application form.
             </p>
-            
+
             <a
               href="https://forms.gle/RLPqj7psA8bkwRzw5"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-teal-600 to-amber-600 text-white py-4 px-6 rounded-lg hover:from-teal-700 hover:to-amber-700 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105"
+              className="w-full bg-gradient-to-r from-[#0a415d] to-[#c1884f] text-white py-4 px-6 rounded-lg hover:from-[#0a415d]/90 hover:to-[#c1884f]/90 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105"
             >
               <Send size={20} />
               <span>Fill Application Form</span>
@@ -157,9 +181,12 @@ const JoinPage: React.FC = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Have questions? Contact us at{' '}
-                <a href="mailto:seudawahcircle@gmail.com" className="text-teal-600 hover:text-teal-700">
-                  seudawahcircle@gmail.com
+                Have questions? Contact us at{" "}
+                <a
+                  href="mailto:ikss.sust@gmail.com"
+                  className="text-[#0a415d] hover:text-[#0a415d]/80"
+                >
+                  ikss.sust@gmail.com
                 </a>
               </p>
             </div>
