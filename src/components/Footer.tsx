@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
               <a
-                href="https://fb.com/ikss.sust"
+                href="https://www.facebook.com/p/Islamic-Knowledge-Seekers-of-SUST-100084868763101/?_rdc=2&_rdr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-[#0a415d] hover:bg-[#0a415d]/90 px-4 py-2 rounded-md transition-colors"
