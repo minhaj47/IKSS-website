@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Globe size={16} className="text-[#c1884f]" />
-                <span className="text-sm">www.ikss-sust.org</span>
+                <span className="text-sm">ikss-website.vercel.app</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-[#c1884f] mt-1" />
