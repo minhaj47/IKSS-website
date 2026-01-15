@@ -42,8 +42,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               <img
                 src="/SEU dawah circle (1).png"
                 alt="IKSS Logo"
-                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                style={{ clipPath: "inset(0 0 20% 0)" }}
+                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-cover transition-transform duration-300 group-hover:scale-105"
+                style={{
+                  clipPath: "inset(0 0 20% 0)",
+                }}
               />
               <div className="absolute -inset-1 bg-gradient-to-r from-[#0a415d]/10 to-[#c1884f]/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
