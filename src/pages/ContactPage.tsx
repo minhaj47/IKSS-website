@@ -73,10 +73,10 @@ const ContactPage: React.FC = () => {
                     Email
                   </h3>
                   <a
-                    href="mailto:ikss.sust@gmail.com"
+                    href="mailto:ikss.technical@gmail.com"
                     className="text-[#0a415d] hover:text-[#0a415d]/80 font-medium"
                   >
-                    ikss.sust@gmail.com
+                    ikss.technical@gmail.com
                   </a>
                   <p className="text-sm text-gray-500">
                     We'll respond within 24 hours
@@ -93,12 +93,12 @@ const ContactPage: React.FC = () => {
                     Website
                   </h3>
                   <a
-                    href="https://www.ikss-sust.org"
+                    href="https://ikss-website.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#c1884f] hover:text-[#c1884f]/80 font-medium"
                   >
-                    www.ikss-sust.org
+                    ikss-website.vercel.app
                   </a>
                   <p className="text-sm text-gray-500">
                     Visit our official website
@@ -175,7 +175,7 @@ const ContactPage: React.FC = () => {
 
             <div className="text-center">
               <a
-                href="mailto:ikss.sust@gmail.com?subject=Inquiry about IKSS&body=Assalamu Alaikum,%0D%0A%0D%0AI would like to know more about Islamic Knowledge Seekers of SUST.%0D%0A%0D%0AJazakAllahu Khairan"
+                href="mailto:ikss.technical@gmail.com?subject=Inquiry about IKSS&body=Assalamu Alaikum,%0D%0A%0D%0AI would like to know more about Islamic Knowledge Seekers of SUST.%0D%0A%0D%0AJazakAllahu Khairan"
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#0a415d] to-[#c1884f] text-white py-4 px-8 rounded-lg hover:from-[#0a415d]/90 hover:to-[#c1884f]/90 transition-all duration-300 font-semibold text-lg shadow-lg transform hover:scale-105"
               >
                 <Mail size={24} />

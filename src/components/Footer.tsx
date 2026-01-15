@@ -34,11 +34,13 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-[#c1884f]" />
-                <span className="text-sm">ikss.sust@gmail.com</span>
+                <span className="text-sm">ikss.technical@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe size={16} className="text-[#c1884f]" />
-                <span className="text-sm">ikss-website.vercel.app</span>
+                <span className="text-sm">
+                  https://ikss-website.vercel.app/
+                </span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-[#c1884f] mt-1" />

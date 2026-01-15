@@ -183,10 +183,10 @@ const JoinPage: React.FC = () => {
               <p className="text-sm text-gray-600">
                 Have questions? Contact us at{" "}
                 <a
-                  href="mailto:ikss.sust@gmail.com"
+                  href="mailto:ikss.technical@gmail.com"
                   className="text-[#0a415d] hover:text-[#0a415d]/80"
                 >
-                  ikss.sust@gmail.com
+                  ikss.technical@gmail.com
                 </a>
               </p>
             </div>
