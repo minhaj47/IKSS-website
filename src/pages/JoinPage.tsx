@@ -170,7 +170,7 @@ const JoinPage: React.FC = () => {
             </p>
 
             <a
-              href="https://forms.gle/RLPqj7psA8bkwRzw5"
+              href="//fdkdfk" // Replace with actual form link
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-gradient-to-r from-[#0a415d] to-[#c1884f] text-white py-4 px-6 rounded-lg hover:from-[#0a415d]/90 hover:to-[#c1884f]/90 transition-all duration-300 font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105"

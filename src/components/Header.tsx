@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                   clipPath: "inset(0 0 20% 0)",
                 }}
               />
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#0a415d]/10 to-[#c1884f]/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* <div className="absolute -inset-1 bg-gradient-to-r from-[#0a415d]/10 to-[#c1884f]/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
             </div>
             <div className="flex flex-col min-w-0">
               {/* Primary Brand Name */}
